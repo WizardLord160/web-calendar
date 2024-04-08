@@ -1,0 +1,43 @@
+/* GLOBAL STYLE */
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color:rgba(135, 135, 135);
+    padding: 25px 0 0 0;
+}
+
+/* DATETIME STYLE */
+.dateTime {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    padding: 5px;
+    width: 25%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dateTime p {
+    margin: 0;
+}
+
+.time {
+    display: flex;
+    margin: 0px 5px 0 10px;
+}
+#time-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 50px;
+}
+#meridiem-text {
+    color: rgba(200, 200, 200, 0.9);
+    font-size: 25px;
+    padding: 25px 0 0 5px;
+}
+.day {
+    margin: 0px 0px 10px 10px;
+}
+#day-text {
+    color: rgba(90, 173, 255, 0.9);
+    font-size: 20px;
+}
+
+/* NEW SECTION */
