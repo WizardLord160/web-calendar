@@ -14,6 +14,7 @@ body {
     padding: 5px;
     width: 25%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 230px;
 }
 .dateTime p {
     margin: 0;
