@@ -26,6 +26,7 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-width: 250px;
     border-radius: 20px;
+    cursor: default;
 }
 .dateTime p {
     margin: 0;
@@ -108,9 +109,10 @@ body {
     position: absolute;
     height: 2rem;
     width: 2rem;
-    border-radius: 50%;
 }
 
 .calendar li div:hover {
     background-color: rgb(125,125,125, 0.3);
+    cursor: pointer;
+    border-radius: 50%;
 }
