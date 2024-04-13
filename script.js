@@ -25,9 +25,10 @@ function circleCurrentDay() {
 
     // The red circle
     calendar_cell.style.position = 'absolute';
-    calendar_cell.style.height = '2rem';
-    calendar_cell.style.width = '2rem';
-    calendar_cell.style['background-color'] = 'rgb(255, 0, 0, 0.2)';
+    calendar_cell.style.height = '100%';
+    calendar_cell.style.width = '100%';
+    calendar_cell.style['background-color'] = 'rgba(90, 173, 255, 0.3)';
+    // calendar_cell.style['color'] = 'rgba(0, 0, 0, 0.7)'; 
     calendar_cell.style['border-radius'] = '50%';
 }
 
