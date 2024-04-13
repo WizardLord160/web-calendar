@@ -14,3 +14,21 @@ setInterval(() => {
     const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
     currDay.innerText = date.toLocaleDateString(undefined, dateOptions);
 }, 1000);
+
+function circleCurrentDay() {
+    // Only getting the value of the day of month
+    const date = new Date();
+    const day = date.toLocaleDateString(undefined, { day: 'numeric' });
+
+    // Selecting the proper grid cell in the calendar
+    const calendar_cell = document.querySelector('#d' + day + ' div');
+
+    // The red circle
+    calendar_cell.style.position = 'absolute';
+    calendar_cell.style.height = '2rem';
+    calendar_cell.style.width = '2rem';
+    calendar_cell.style['background-color'] = 'rgb(255, 0, 0, 0.2)';
+    calendar_cell.style['border-radius'] = '50%';
+}
+
+circleCurrentDay();
