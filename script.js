@@ -25,6 +25,7 @@ function circleCurrentDay() {
 
     // The red circle
     calendar_cell.style['background-color'] = 'rgb(255, 0, 0, 0.2)';
+    calendar_cell.style['border-radius'] = '50%';
     
 }
 
