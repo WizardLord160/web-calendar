@@ -82,7 +82,7 @@ body {
     row-gap: 10px;
 }
 
-.daysofweek{
+.days-of-week{
     grid-column-start: 0;
     font-size: 1.15rem !important;
 }
