@@ -24,11 +24,8 @@ function circleCurrentDay() {
     const calendar_cell = document.querySelector('#d' + day + ' div');
 
     // The red circle
-    calendar_cell.style.position = 'absolute';
-    calendar_cell.style.height = '2rem';
-    calendar_cell.style.width = '2rem';
     calendar_cell.style['background-color'] = 'rgb(255, 0, 0, 0.2)';
-    calendar_cell.style['border-radius'] = '50%';
+    
 }
 
 circleCurrentDay();
