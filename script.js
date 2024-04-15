@@ -38,6 +38,17 @@ function circleCurrentDay() {
     calendar_cell.style['border-radius'] = '50%';
     
 }
+function circleCurrentHour() {
+    // Only getting the value of the day of month
+    const date = new Date();
+
+    // TODO: Selecting the proper grid cell in the calendar
+    const calendar_cell = document.querySelector('#h' + date.getHours() + '.week-li');
+
+    // The red square
+    calendar_cell.style['background-color'] = 'rgb(255, 0, 0, 0.2)';
+    
+}
 
 /*
  * Creates the dates on the calendar
@@ -71,9 +82,10 @@ function changeToWeekView() {
     calendar.classList.add("week-view")
 
     for (let i = 1; i <= 168; i++) {
-        const HTMLString = `<li id="d${i}" class="week-li"><div>hr</div></li>`;
+        const HTMLString = `<li id="h${i}" class="week-li"><div>hr</div></li>`;
         calendar.insertAdjacentHTML('beforeEnd', HTMLString);
     }
+    circleCurrentHour();
 }
 
 viewDropdownList.addEventListener("change", (e) => {
