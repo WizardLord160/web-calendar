@@ -74,6 +74,10 @@ function changeToMonthView() {
     circleCurrentDay();
 }
 
+/*
+ * Changes the view to Weekly view
+ * TODO: expand the view to be larger
+ */
 function changeToWeekView() {
     const calendar = document.querySelector('.calendar');
     // if (calendar.classList.contains("month-view")) {
@@ -88,9 +92,15 @@ function changeToWeekView() {
     circleCurrentHour();
 }
 
+/*
+ * Detects for changes in the dropdown menu for month, week, day view
+ * Accepts argument 'e' as the option chosen and changes view based on it
+ */
 viewDropdownList.addEventListener("change", (e) => {
     const calendar = document.querySelector('.calendar');
     calendar.innerHTML = "";
+
+    // e.target is used to refer to the option from the dropdown menu
     switch (e.target.value) {
         case "Month":
             changeToMonthView();
