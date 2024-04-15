@@ -60,6 +60,7 @@ function changeToMonthView() {
         const HTMLString = `<li id="d${i}" class="month-li"><div></div>${i}</li>`;
         calendar.insertAdjacentHTML('beforeEnd', HTMLString);
     }
+    circleCurrentDay();
 }
 
 function changeToWeekView() {
@@ -92,4 +93,3 @@ viewDropdownList.addEventListener("change", (e) => {
 
 // Default view on load
 changeToMonthView();
-circleCurrentDay();
