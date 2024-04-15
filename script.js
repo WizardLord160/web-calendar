@@ -1,6 +1,7 @@
 const time = document.getElementById("time-text");
 const meridiem = document.getElementById("meridiem-text");
 const currDay = document.getElementById("day-text");
+const viewDropdownList = document.getElementById("calendar-view");
 
 /*
  * Updates the current time and date in realtime
@@ -44,7 +45,7 @@ function circleCurrentDay() {
  * TODO: Decide where to place 1st of month
  *       Decide how many days each month has
  */
-function setUpCalendar() {
+function changeToMonthView() {
 
     // gets the calendar list element
     const calendar = document.querySelector('.calendar');
@@ -56,6 +57,29 @@ function setUpCalendar() {
     }
 }
 
+function changeToWeekView() {
+    const calendar = document.querySelector('.calendar');
+    for (let i = 1; i <= 7; i++) {
+        const HTMLString = `<li id="d${i}"><div></div>${i}</li>`;
+        calendar.insertAdjacentHTML('beforeEnd', HTMLString);
+    }
+}
 
-setUpCalendar();
+viewDropdownList.addEventListener("change", (e) => {
+    const calendar = document.querySelector('.calendar');
+    calendar.innerHTML = "";
+    switch (e.target.value) {
+        case "Month":
+            changeToMonthView();
+            break;
+        case "Week":
+            changeToWeekView();
+            break;
+        default:
+            changeToMonthView();
+    }
+})
+
+// Default view on load
+changeToMonthView();
 circleCurrentDay();
