@@ -50,17 +50,27 @@ function changeToMonthView() {
     // gets the calendar list element
     const calendar = document.querySelector('.calendar');
 
+    if (calendar.classList.contains("week-view")) {
+        calendar.classList.remove("week-view");
+    }
+    calendar.classList.add("month-view")
+
     // inserts the html into the list
     for (let i = 1; i <= 31; i++) {
-        const HTMLString = `<li id="d${i}"><div></div>${i}</li>`;
+        const HTMLString = `<li id="d${i}" class="month-li"><div></div>${i}</li>`;
         calendar.insertAdjacentHTML('beforeEnd', HTMLString);
     }
 }
 
 function changeToWeekView() {
     const calendar = document.querySelector('.calendar');
-    for (let i = 1; i <= 7; i++) {
-        const HTMLString = `<li id="d${i}"><div></div>${i}</li>`;
+    // if (calendar.classList.contains("month-view")) {
+    //     calendar.classList.remove("month-view");
+    // }
+    calendar.classList.add("week-view")
+
+    for (let i = 1; i <= 168; i++) {
+        const HTMLString = `<li id="d${i}" class="week-li"><div>hr</div></li>`;
         calendar.insertAdjacentHTML('beforeEnd', HTMLString);
     }
 }
